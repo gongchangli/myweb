@@ -1,0 +1,71 @@
+.header{
+	height:35px;
+	line-height: 35px;
+	background: #999;
+	color:#fff;
+}
+.ch{
+	padding:0 10px;
+}
+/*导航*/
+.top{
+	background: #333;
+}
+.top .navbar-default{
+	background: #333;
+	border:0;
+}
+.top .navbar-default .navbar-nav>li>a{
+	color:#fff;
+}
+.top .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	color:#fff;
+	background: #545353;
+}
+.top .nav>li>a{
+	    padding: 15px 24px;
+}
+.top .navbar{
+	margin-bottom:0;
+}
+/*内容*/
+.text{
+	background: #333;
+	color:#fff;
+	padding:20px 0;
+}
+.text p{
+	color:#999;
+}
+.free p{
+	margin-top:30px;
+}
+/*学习*/
+.xuexi{
+	margin-top:50px;
+}
+.xuexi h1{
+	color:#00a080;
+}
+.trend{
+	margin-top:30px;
+	background:#00a080;
+	text-align: center;
+	padding:30px 0;
+}
+/**/
+.people{
+	background: url(../image/bg.jpg);
+	/*height:500px;*/
+	margin-top:-200px;
+	position: relative;
+	z-index: -1;
+	padding-top:240px;
+}
+.people-p{
+	max-width: 600px;;
+	margin:0 auto;
+	color:#eee;
+}
+
+

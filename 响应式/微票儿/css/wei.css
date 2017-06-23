@@ -1,0 +1,67 @@
+#top{
+	background: #333;
+	border:0;
+}
+.top{
+		background: #333;
+}
+#top li a{
+	color:#fff;
+}
+.navbar{
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width:768px ) {
+	
+	.my{
+		position: absolute;
+		left:50%;
+		top:0;
+	}
+	.my li{
+		float:left;
+	}
+}
+/*轮播*/
+.wrap{
+	background: url(../image/bannerbg.png) center;
+	/*height:400px;*/
+	padding:40px 0;
+	background-size: cover;
+}
+
+.look{
+	background: #fff;
+	padding:20px;
+	
+}
+
+
+.body2{
+	margin-top:40px;
+}
+
+.wenxue{
+	border:1px solid #999;
+	padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

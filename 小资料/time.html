@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span>第一场活动开始倒计时为：<span id="wz1"></span></span>
+		<br />
+		<span>第二场活动开始倒计时为：<span id="wz2"></span></span>
+		<script type="text/javascript">
+		var wz1=document.getElementById("wz1");//位置
+		var end1=new Date("2017/6/23 10:00");//结束时间
+		//2
+		var wz2=document.getElementById("wz2");//位置
+		var end2=new Date("2017/7/14 10:00");//结束时间
+		console.log(end1)
+			function time(wzs,end){
+				setInterval(move,1000)
+				//d天h小时m分钟s秒
+				function move(d,h,m,s){
+					var timer = new Date()//获取当前的时间					
+					var second=parseInt( ( end.getTime()- timer.getTime() ) /1000);
+					//距离截止时间的总秒数
+					d= parseInt(second/60/60/24)//天
+					h= parseInt(second/60/60%24)//小时
+					m= parseInt(second/60%60)//分钟
+					s= parseInt(second%60)//秒
+					//关系运算符
+					h<10?h='0'+h:h=h
+					m<10?m='0'+m:m=m
+					s<10?s='0'+s:s=s
+					//将时间放置在指定位置
+					wzs.innerHTML=d+'天'+h+'小时'+m+'分'+s+'秒'
+				}
+			}
+			time(wz1,end1)//调用函数，函数里面的是参数
+			time(wz2,end2)
+		</script>
+	</body>
+</html>

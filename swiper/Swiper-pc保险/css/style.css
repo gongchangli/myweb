@@ -1,0 +1,127 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+	font-family: "微软雅黑";
+	
+}
+.swiper-container,.swiper-slide{
+	width:100%;
+	height:100%;
+}
+.swiper-slide{
+	background-position: center center;
+	position:relative;
+	/*background-size: cover;*/
+}
+/*第一屏动画*/
+
+.slide1{
+	background-image: url(../img/1.jpg);
+	
+	
+}
+.slide1 .logo{
+	display: block;
+	position: absolute;
+left:60px;
+top:60px;
+
+}
+.slide1 .slid1-center{
+		position: absolute;
+left:22%;
+top:30%;
+}
+.slide1 .slid1-center .one{
+	margin-top:13px;
+}
+.slide1 .slid1-center .two p{
+	margin-top:16px;
+	font-size:20px;
+}
+
+.slide1  .onload{
+	background: orange;
+	color:#fff;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 40px;
+	height:40px;
+	padding:0 20px;
+	margin-top:20px;
+}
+/*第二瓶内容*/
+.slide2{
+	background-image: url(../img/2.jpg);
+}
+
+
+.slide2 .title1{
+	position: absolute;
+	left:10%;
+	top:30%;
+}
+.slide2 .title2{
+	color:#fff;
+	font-size: 20px;
+		position: absolute;
+	left:10%;
+	top:45%;
+}
+.slide2 .title2 p{
+	margin-top: 20px;
+	
+}
+/*第三屏*/
+.slide3{
+	background-image: url(../img/3.jpg);
+}
+
+.three{
+	position: absolute;
+	top:25%;
+	left:36%;
+	color:#fff;
+	text-align: center;
+
+	
+}
+
+.three .wenzi p{
+	margin-top: 20px;
+}
+/*444*/
+.slide4{
+	background-image: url(../img/5.jpg);
+}
+.four{
+	position: absolute;
+	top:20%;
+	left:10%;
+	color:#fff;
+}
+.p{
+	line-height: 40px;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

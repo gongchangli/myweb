@@ -1,0 +1,199 @@
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+li{
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .myform{
+        display: none;
+
+    }
+    .myul{
+        float: right;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        font-size: 14px;
+        margin-left: 6px;
+    }
+    .myul li{
+        float: left;
+
+    }
+    .myul li a{
+        font-size: 1em;
+        padding: 10px 6px;
+
+    }
+}
+#body a{
+    color: #000017;
+}
+#body a:hover{
+    color: #2ed2c1;
+
+}
+#navActive{
+    color: #2ed2c1;
+}
+#header{
+    overflow: hidden;
+}
+#header a{
+    color: #fff;
+}
+#header a:hover{
+    color: #2ed2c1;
+}
+
+/*模态框*/
+.myMP{
+    margin: 20px;
+}
+.myB{
+    margin-bottom: 20px;
+}
+
+/*下拉菜单*/
+.myBtn{
+    position: relative;
+    top: 14px;
+}
+#mydropdown a{
+    color: #000017;
+}
+
+#content1{
+    width: 100%;
+    height: 100%;
+    background: url("../image/bannerbg.png") 0 0 no-repeat;
+    margin-top: 70px;
+    padding: 60px 20px;
+    margin-bottom: 20px;
+}
+.newsList{
+    background: #fff;
+    padding: 14px;
+}
+.newsText{
+    margin-top: 20px;
+}
+.newsList p{
+    line-height: 28px;
+}
+.borderLine{
+    padding: 0 0 10px;
+    border-bottom: 1px dashed #ccc;
+}
+.borderLine a{
+    color: #2ed2c1;
+
+}
+#content1 a:hover{
+    color: #2ed2c1;
+}
+
+.tabList{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.myTabContent{
+    margin-top: 20px;
+}
+
+#content4{
+    margin-top: 20px;
+}
+.myFont{
+    color:#2ed2c1 ;
+    font-size: 30px;
+
+}
+.color{
+    color:#2ed2c1 ;
+}
+.myh2{
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    background: #2ed2c1;
+    color: #fff;
+    padding: 0px 4px;
+}
+.myh2 small{
+    color: #fff;
+}
+.myh4 {
+    font-size: 14px;
+    line-height: 20px;
+}
+.mytitle h3{
+    float: left;
+}
+
+.mytitle a{
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+
+}
+
+.list p{
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 6px;
+}
+.myList{
+    border: 1px solid #ccc;
+
+}
+.hotTitle{
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 4px;
+    border-bottom: 1px solid #ccc;
+}
+#content5{
+    margin-top: 20px;
+}
+
+#footer{
+    background: #252525;
+    color: #777;
+    height: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.mytab{
+    margin-top: 10px;
+}
+.left{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.left img{
+    margin-left: 10px;
+}
+.right{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

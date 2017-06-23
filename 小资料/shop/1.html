@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			td {
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<table style="text-align: center;" ng-app="app" ng-controller="myctrl">
+			<tr>
+				<td>图片</td>
+				<td>编号</td>
+				<td>名称</td>
+				<td>数量</td>
+				<td>单价</td>
+				<td>总价</td>
+				<td>操作</td>
+			</tr>
+			<tr ng-repeat="x in js">
+				<td><img src="{{x.pic}}" alt="" /></td>
+				<td>{{x.id}}</td>
+				<td>{{x.name}}</td>
+				
+				<td>
+					<button ng-click="reduce($index)">-</button>
+					{{x.count}}
+					<button ng-click="add($index)">+</button>
+				</td>
+				
+				<td>{{x.price}}</td>
+				<td>{{x.count*x.price}}</td>
+				<td><button ng-click="shan($index)">移除</button></td>
+			</tr>
+			<tr>
+				<td>总价为：{{zongjia()}}</td>
+				<td>总数为：{{shu()}}</td>
+				<td><button ng-click="clear()">清空购物车</button></td>
+			</tr>
+		</table>
+
+		<script src="angular.min.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('app', []);
+			app.controller('myctrl', function($scope) {
+				$scope.js = [{
+					id: 1,
+					name: "iphone6",
+					count: 3,
+					price: 1000,
+					pic: 'img/1.jpg'
+				}, {
+					id: 2,
+					name: "iphone6",
+					count: 3,
+					price: 1000,
+					pic: 'img/2.jpg'
+				}, {
+
+					id: 3,
+					name: "iphone6",
+					count: 3,
+					price: 1000,
+					pic: 'img/3.jpg'
+				}, {
+
+					id: 4,
+					name: "iphone6",
+					count: 3,
+					price: 1000,
+					pic: 'img/4.jpg'
+				}]
+				$scope.zongjia=function(){
+					var zong=0;
+					for(var i=0;i<$scope.js.length;i++)
+					{
+						zong+=$scope.js[i].count*$scope.js[i].price
+					}
+					return zong;
+				}
+				$scope.shu=function(){
+					var shuzi=0;
+					for(var i=0;i<$scope.js.length;i++)
+					{
+						shuzi+=$scope.js[i].count
+					}
+					return shuzi;
+				}
+				$scope.add=function(index){
+				$scope.js[index].count++;
+				}
+				
+				$scope.reduce=function(index){
+				//$scope.product[index].num--;
+				/*$scope.wepin[index].num=Math.max(--$scope.wepin[index].num,0);*/
+				if($scope.js[index].count--<=0)
+				{
+					$scope.js[index].count=0
+				}
+				/*return $scope.wepin[index].num*/
+				}
+				/*$scope.shan=function(index){
+					$scope.js[index].count=0
+					$scope.js[index].price=0
+					$scope.js[index]=!$scope.js[index]
+				}*/
+				/*移除某一项 。splice删除和添加先的数组，index是选择当前的项目，1是选择删除项目的数量*/
+				 $scope.shan=function(index){  
+                if(confirm('确定移除此项吗？')){  
+                    $scope.js.splice(index,1);  
+                }  
+            };  
+            /*清空购物车*/
+           
+            	$scope.clear=function(){  
+                if(confirm('确定清空购物车')){  
+                    $scope.js=[];  
+                }  
+            }  
+			})
+		</script>
+	</body>
+
+</html>
