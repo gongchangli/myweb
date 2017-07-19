@@ -398,8 +398,8 @@
 		<!--footer-->
 		<!--topnav-->
 		<ul class="top_nav">
-			<li class="list_f" > 
-				<a href="###" >
+			<li  > 
+				<a href="###" class="list_f" >
 					<img class="tn_1" src="img/导航.png" alt="" />
 					导航
 				</a>
@@ -438,18 +438,16 @@ $(".case_c_left li").click(function() {
 		$(".case_c_left li").eq(i).addClass("active").siblings().removeClass("active")
 		$(".case_c_right_1").eq(i).show().siblings().hide()
 })
-$(".list_f").click(function() {
-	if($(".list_two").css("display") == "none") {
 
+
+
+$(".list_f,.list_two li").focus(function() {	
 		$(".list_two").show()
-
-	} else {
-
-		$(".list_two").hide()
-
-	}
-
 })
+$(".list_f").parents().siblings().click(function() {	
+		$(".list_two").hide()
+})
+
 
 </script>
 	</body>
