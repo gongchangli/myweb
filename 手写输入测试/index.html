@@ -20,6 +20,7 @@
 				border-top: none;
 				border-left: none;
 				border-right: none;
+				background-color:transparent;
 				outline: none;
 				width: 0.5rem;
 				height: 0.3rem;
@@ -28,6 +29,14 @@
 				font-size: 0.3rem;
 				text-align: center;
 			}
+			p input[type=text] {  
+    background-color:transparent;  
+    color:#fff;  
+    FILTER: alpha(opacity=0); /*androd*/  
+    appearance:none;  /*下拉框去掉右侧图标*/  
+    -moz-appearance:none;  
+    -webkit-appearance:none;  
+} 
 		</style>
 	</head>
 
@@ -36,47 +45,13 @@
 			天天<span><input type="text" name="" id="ti12" value="" /></span>上
 		</p>
 
-		<div id="signature"></div>
+	
 
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js">
 		</script>
 		<script type="text/javascript" src="js/手机字体插件.js">
 		</script>
-		<!--[if lt IE 9]>
-<script type="text/javascript" src="jSignature-master/libs/flashcanvas.js"></script><![endif]-->
-
-		<script src="jSignature-master/libs/jSignature.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$("#signature").jSignature()
-			})
-			var $sigdiv = $("#signature")
-			$sigdiv.jSignature() //// inits的jSignature部件。
-				//一些涂鸦后......
-			$sigdiv.jSignature("reset") //清除画布并重新渲染的装饰就可以了
-				// 获取签名的SVG和呈现在浏览器中的SVG. 
-				//此导出插件返回数组[MIMETYPE，签名的SVG的base64编码字符串划]
-			var datapair = $sigdiv.jSignature("getData", "svgbase64")
-			var i = new Image()
-			i.src = "data:" + datapair[0] + "," + datapair[1]
-			$(i).appendTo($("#someelement") // 添加图像（SVG），到 DOM
-					// 获取签名的“base30”数据对
-					datapair = $sigdiv.jSignature("getData", "base30")
-					//重新导入数据到jSignature。
-					$sigdiv.jSignature("setData", "data:" + datapair.join(",")) var $sigdiv = $("#signature")
-					$sigdiv.jSignature() //// inits的jSignature部件。
-					//一些涂鸦后......
-					$sigdiv.jSignature("reset") //清除画布并重新渲染的装饰就可以了
-					// 获取签名的SVG和呈现在浏览器中的SVG. 
-					//此导出插件返回数组[MIMETYPE，签名的SVG的base64编码字符串划]
-					var datapair = $sigdiv.jSignature("getData", "svgbase64")
-					var i = new Image()
-					i.src = "data:" + datapair[0] + "," + datapair[1] $(i).appendTo($("#someelement") // 添加图像（SVG），到 DOM
-						// 获取签名的“base30”数据对
-						datapair = $sigdiv.jSignature("getData", "base30")
-						//重新导入数据到jSignature。
-						$sigdiv.jSignature("setData", "data:" + datapair.join(","))
-		</script>
+		
 		<script type="text/javascript">
 			$("#ti12").blur(function() {
 				var an12 = $("#ti12").val();
