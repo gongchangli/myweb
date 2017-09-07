@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form name="f">
+<div style="display:none">
+<input type="text" name="wd" id="kw" autocomplete="off">
+<span id="sx">手写输入</span>
+</div>
+<input type="text" name="address" id="address" onclick="setDefaultID(this)">
+<input type="text" name="tel" id="tel" onclick="setDefaultID(this)">
+<input type="submit" value="提交" id="su">
+</form>
+
+<script>
+var hw = {};
+function setDefaultID(obj){
+hw.input = obj;
+hw.sx.onclick(window.event);
+}
+</script>
+<script src="c:\hwInput.js"></script>
+	</body>
+</html>
