@@ -29,14 +29,7 @@
 				font-size: 0.3rem;
 				text-align: center;
 			}
-			p input[type=text] {  
-    background-color:transparent;  
-    color:#fff;  
-    FILTER: alpha(opacity=0); /*androd*/  
-    appearance:none;  /*下拉框去掉右侧图标*/  
-    -moz-appearance:none;  
-    -webkit-appearance:none;  
-} 
+			#can{margin: 0px auto;display: block;}
 		</style>
 	</head>
 
@@ -44,11 +37,10 @@
 		<p>
 			天天<span><input type="text" name="" id="ti12" value="" /></span>上
 		</p>
-
+		<canvas id="can" width="600" height="300" style="border:1px solid black">Canvas画板</canvas>
 	
 
-		<script type="text/javascript" src="js/jquery-1.11.1.min.js">
-		</script>
+		<script src="http://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/手机字体插件.js">
 		</script>
 		
@@ -61,6 +53,49 @@
 					alert("答案错误")
 				}
 			})
+			
+var canvas = $("#can"),//获取canvas元素
+    pan = canvas[0].getContext("2d"),//获取2D图像API接口
+    paint = false,//鼠标左键是否在画板区域按下
+    x,
+    y;
+pan.strokeStyle = "#000000";//设置画笔颜色
+pan.lineJoin = "round";//设置画笔轨迹基于圆点拼接
+pan.lineWidth = 9;//设置画笔粗细
+ 
+//监控画板上的鼠标左键按下
+canvas.mousedown(function(e){
+    paint = true;
+    x = e.offsetX;
+    y = e.offsetY;
+    pan.beginPath();
+    pan.moveTo(x,y);
+});
+//移动鼠标
+canvas.mousemove(function(e){
+    if(paint) {
+        var nx = e.offsetX,
+            ny = e.offsetY;
+        pan.lineTo(x, y);
+        pan.stroke();
+        x = nx;
+        y = ny;
+    }
+});
+//释放鼠标左键
+canvas.mouseup(function(e){
+    paint = false;
+});
+//鼠标离开画板
+canvas.mouseleave(function(e){
+    paint = false;
+});
+//提交数据处理
+$('form').submit(function() {
+    var data = canvas[0].toDataURL("image/png");//把canvas画板上的内容转成指定格式图片数据，并进行Base64编码
+    $('input').val(data);
+});
+</script>
 		</script>
 	</body>
 
